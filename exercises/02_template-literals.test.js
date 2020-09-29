@@ -7,7 +7,7 @@ test('should support string interpolation', () => {
         ]
     };
     // construct a string using template literal string interpolation
-    const personsFriends = `${person.name} has 2 friends: ${person.friends[0]}, ${person.friends[1]}`;
+    const personsFriends = `${person.name} has 2 friends: ${person.friends.join(', ')}`;
     expect(personsFriends)
         .toBe(
             'John Doe has 2 friends: Such Creative, Much Wow'
