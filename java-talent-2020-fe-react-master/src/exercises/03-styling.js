@@ -12,7 +12,7 @@ function Box(props) {
         // - className that is assigned to `Box Box--${props.size}`
         // - style that is assigned to props.style
         // inside the div, forward along props.children
-    <div className={box} style={props.style}>{props.children}</div>
+    <div className={`Box--${props.size}`} style={props.style}>{props.children}</div>
     );
 }
 
