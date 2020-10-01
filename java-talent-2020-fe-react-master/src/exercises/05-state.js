@@ -12,10 +12,10 @@ import React from 'react';
 class EditNote extends React.Component {
     state = { title: '', content: '' }
     onChangeTitle = e => {
-        this.setState({ title: this.state.title = e.target.value })
+        this.setState({ title: e.target.value })
     }
     onChangeContent = e => {
-        this.setState({content: this.state.content = e.target.value})
+        this.setState({content: e.target.value})
     }
     render() {
         return <div>
