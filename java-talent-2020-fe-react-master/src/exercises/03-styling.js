@@ -5,7 +5,6 @@ import './03-styling.css';
 // this will use webpack to load the css styles into your app.
 
 function Box(props) {
-    const box=`Box--${props.size}`;
     return (
         
         // render a div with the props:
