@@ -29,12 +29,12 @@ class EditNoteForm extends Component {
     onChangeTitleHandler = e => {
         if (e.target.value === "") {
             this.setState({ titleError: "Title is a mandatory field" })
-            this.setState({ title: this.state.title = e.target.value })
+            this.setState({ title: e.target.value })
         } else if (e.target.value.length > 10) {
             this.setState({ titleError: "Title cannot contain more than 10 characters" })
-            this.setState({ title: this.state.title = e.target.value })
+            this.setState({ title: e.target.value })
         } else {
-            this.setState({ title: this.state.title = e.target.value })
+            this.setState({ title: e.target.value })
             this.setState({ titleError: "" })
         }
     }
@@ -42,9 +42,9 @@ class EditNoteForm extends Component {
     onChangeContentHandler = e => {
         if (e.target.value === "") {
             this.setState({ contentError: "Content is a mandatory field" })
-            this.setState({ content: this.state.content = e.target.value })
+            this.setState({ content: e.target.value })
         } else {
-            this.setState({ content: this.state.content = e.target.value })
+            this.setState({ content: e.target.value })
             this.setState({ contentError: "" })
         }
     }

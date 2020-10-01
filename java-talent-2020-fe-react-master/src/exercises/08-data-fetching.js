@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
+// import NoteComponent from "./NoteComponent";
 // For our data fetching exercise we're gonna take advantage of the Notes REST API that you already created.
 //
 // It is best to use lifecycle method `componentDidMount` to
@@ -13,11 +15,33 @@ import React, { Component } from 'react';
 //
 
 export default class NotesGrid extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { content: [] }
+    }
+    componentDidMount() {
+        Axios.get("/api/notes")
+            .then(response => {
+                this.setState(st => ({ ...st, content: [...response.data] }))
+            })
+    }
     render() {
         return (
             <div>
-                Notes! Render the Grid of notes in here.
+                {this.state.content.map(note => {
+                    return (
+                        <div>
+                            <h1>{note.title}</h1>
+                            <p>{note.content}</p>
+                            <p>Tags:</p>
+                            <ul>
+                                {note.tags.map(tag => <li>{tag.name}</li>)}
+                            </ul>
+                        </div>
+                    )
+                })}
             </div>
+
         );
     }
 }
