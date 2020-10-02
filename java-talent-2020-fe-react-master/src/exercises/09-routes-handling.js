@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 function Routes() {
     return (
-        <Router>
+        
       <div>
         <nav>
           <ul>
@@ -27,16 +27,13 @@ function Routes() {
             </li>
           </ul>
         </nav>
-        <Switch>
           <Route path="/exercise/routes-handling/edit-note">
             <EditNote />
           </Route>
           <Route path="/exercise/routes-handling/create-note">
             <CreateNote />
           </Route>
-        </Switch>
       </div>
-    </Router>
     );
 }
 

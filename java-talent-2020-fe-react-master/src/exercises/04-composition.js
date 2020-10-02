@@ -11,10 +11,10 @@ function Note(props) {
     // pass props.title to <NoteHeader />
     // pass props.content to <NoteContent />
     return <div className="note">
-        <NoteHeader title = {props.title}/>
-        <NoteContent content={props.content}/>
-        <NoteFooter onEdit={onEdit}/>
-        </div>;
+        <NoteHeader title={props.title} />
+        <NoteContent content={props.content} />
+        <NoteFooter onEdit={onEdit} tags={props.tags} />
+    </div>;
 }
 
 Note.propTypes = {
@@ -46,10 +46,11 @@ NoteContent.propTypes = {
     content: PropTypes.string.isRequired
 };
 
-function NoteFooter({ onEdit }) {
+function NoteFooter({onEdit,tags}) {
     return (
         <div className="note-footer">
-            <button onClick={onEdit}>Edit</button>
+            <label>{tags===undefined?"": `#${tags.map(tag => tag.name)}`}</label> 
+              <button onClick={onEdit}>Edit</button>
         </div>
     );
 }
@@ -67,3 +68,4 @@ export const Example = (props) => (
         <Note title="First Note" content="This is my first note" />
     </div>
 );
+export default Note;
