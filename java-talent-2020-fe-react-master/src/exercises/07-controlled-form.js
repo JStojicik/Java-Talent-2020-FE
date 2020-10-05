@@ -27,26 +27,23 @@ class EditNoteForm extends Component {
     state = { title: this.props.defaultTitle, content: this.props.defaultContent, titleError: "", contentError: "" }
 
     onChangeTitleHandler = e => {
-        if (e.target.value === "") {
+        if (!e.target.value) {
             this.setState({ titleError: "Title is a mandatory field" })
-            this.setState({ title: e.target.value })
         } else if (e.target.value.length > 10) {
             this.setState({ titleError: "Title cannot contain more than 10 characters" })
-            this.setState({ title: e.target.value })
         } else {
-            this.setState({ title: e.target.value })
             this.setState({ titleError: "" })
         }
+        this.setState({ title: e.target.value })
     }
 
     onChangeContentHandler = e => {
-        if (e.target.value === "") {
+        if (!e.target.value) {
             this.setState({ contentError: "Content is a mandatory field" })
-            this.setState({ content: e.target.value })
         } else {
-            this.setState({ content: e.target.value })
             this.setState({ contentError: "" })
         }
+        this.setState({ content: e.target.value })
     }
 
     onSubmitHandler = e => {
@@ -65,10 +62,7 @@ class EditNoteForm extends Component {
                 {this.state.contentError}
             </div>
             <button
-                disabled={
-                    !this.state.title ||
-                    this.state.content === "" ||
-                    this.state.title.length > 10
+                disabled={this.state.contentError || this.state.titleError  
                 } type="submit" onClick={this.onSubmitHandler}>
                 submit
             </button>
