@@ -1,0 +1,13 @@
+.note-header {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ece09f;
+    border: 1px bold;
+}
+button {
+    border:none;
+    background-color:transparent;
+    outline:none;
+   float: right;
+ }

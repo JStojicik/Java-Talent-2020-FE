@@ -1,0 +1,13 @@
+.deleteTagButton{
+
+    line-height: 1.5715;
+    height: 30px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.85);
+    background: #fff;
+    border: none;
+    margin-top: 1px;
+    border-radius: 5px;
+}

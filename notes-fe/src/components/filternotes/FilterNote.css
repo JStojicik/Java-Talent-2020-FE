@@ -1,0 +1,39 @@
+.cancelFilter{
+    margin-top: 10px;
+    margin-bottom: 23px;
+  
+}
+
+.note {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: linear-gradient(#fdf4bb,#e8dc88);
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+.note .note-content {
+    padding: 10px 10px 0;
+}
+.editButton{
+    margin-top: 130px;
+    float:right;
+    padding: 8px;
+    
+    
+ 
+}
+.editButton i{
+    color: #000;
+    position: absolute;
+    cursor: pointer;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+.divContainer{
+    margin-top: 30px;
+}
+.note{
+    margin-bottom: 30px;
+}

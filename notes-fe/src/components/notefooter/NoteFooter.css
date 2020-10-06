@@ -1,0 +1,53 @@
+/* 
+.tag {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    margin-bottom: none;
+    background-color: #d9c939;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+} */
+
+.tagName {
+    display: inline-block;
+    background: #d9c939;
+    border-radius: 20px;
+    padding: 3px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0.1rem 0;
+   
+}
+
+.tags {
+    display: inline-block;
+    padding: 0;
+}
+
+.note-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    max-height: 70px;
+    float:left;
+    
+}
+Link .tagName{
+    width:30%;
+}
+.tagLinkNote{
+    width: auto;
+    float: left;
+    text-decoration: none;
+    color:black;
+}
+.tagLinkNote:hover{
+    width: auto;
+    float: left;
+    text-decoration: none;
+    color:black;
+}

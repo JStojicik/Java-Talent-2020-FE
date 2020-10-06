@@ -1,0 +1,45 @@
+.menageTag{
+    margin:0 auto;
+    width:100px;
+    margin-top: 50px;
+    border:1px solid white;
+    padding: 40px;
+    background-color: #e8dc88;
+    border-radius: 5px;
+}
+.inputText{
+    padding: 4px 11px;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    width:83%;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.createTagButton{
+    line-height: 1.5715;
+    height: 30px;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: rgba(0,0,0,.85);
+    background: #fff;
+    border: none;
+    margin-top: 1px;
+    border-radius: 5px;
+}
+.inputTextCreate{
+    padding: 4px 11px;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    width:83%;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+  
+}
+.tagsInputs{
+    margin-top:px;
+}
